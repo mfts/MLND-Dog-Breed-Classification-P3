@@ -18,3 +18,15 @@ The dog dataset contains 133 folders each corresponding to a different dog breed
 
 ### Solution Statement
 The aim is to create a CNN-based classifier that can correctly classify each of the 133 dog breeds. In order to classify the dog breeds properly, I am designing a deep neural network and then training the network on the supplied datasets. In the end, the classifier can differentiate between dog breeds as well as dogs and humans and non-human/non-dogs.
+
+We will use the evaluation metrics to compare the the performance of the classifier against the benchmark models in the next section.
+
+### Benchmark Model
+For the benchmark model, we will use models that have performed well on a similar dataset of dog breeds from Stanford [1](http://cs231n.stanford.edu/reports/2015/pdfs/fcdh_FinalReport.pdf)
+
+| Method                         | Top - 1 Accuracy (%) |
+|--------------------------------|----------------------|
+| SIFT + Gaussian Kernel         | 22%                  |
+| Unsupervised Learning Template | 38%                  |
+| Gnostic Fields                 | 47%                  |
+| Selective Pooling Vectors      | 52%                  |
