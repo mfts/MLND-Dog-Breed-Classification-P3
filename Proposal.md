@@ -33,3 +33,10 @@ For the benchmark model, we will use models that have performed well on a simila
 
 ### Evaluation Metrics
 The evaluation metric for this problem is simply the accuracy score.
+
+### Project Design
+**Data Preprocessing:** Before we can begin with the model design/training, we first have to import the datasets and process the datasets so we can work with it.
+**Data Splitting:** Next, we split the data into train, validation and test sets.
+**Model Design/Training:** We will build two models: one from scratch and one with transfer learning from a pre-trained model. Training is done with the train set and validated with the validation set
+**Model Evaluation:** We evaluate the classifier against the test set.
+**Model Testing:** Finally, we will test the model on completely new images of humans, dogs, and non-humans/non-dogs. 
