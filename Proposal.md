@@ -40,3 +40,7 @@ The evaluation metric for this problem is simply the accuracy score.
 **Model Design/Training:** We will build two models: one from scratch and one with transfer learning from a pre-trained model. Training is done with the train set and validated with the validation set
 **Model Evaluation:** We evaluate the classifier against the test set.
 **Model Testing:** Finally, we will test the model on completely new images of humans, dogs, and non-humans/non-dogs. 
+
+### References
+
+[1] Hsu, David (2015), "Using Convolutional Neural Networks to Classify Dog Breeds", http://cs231n.stanford.edu/reports/2015/pdfs/fcdh_FinalReport.pdf
