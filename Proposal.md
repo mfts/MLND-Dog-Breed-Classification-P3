@@ -30,3 +30,6 @@ For the benchmark model, we will use models that have performed well on a simila
 | Unsupervised Learning Template | 38%                  |
 | Gnostic Fields                 | 47%                  |
 | Selective Pooling Vectors      | 52%                  |
+
+### Evaluation Metrics
+The evaluation metric for this problem is simply the accuracy score.
