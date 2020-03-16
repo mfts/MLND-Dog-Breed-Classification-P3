@@ -1,8 +1,6 @@
 # Machine Learning Engineer Nanodegree
 
-Marc Seitz
-
-March 2020
+Marc Seitz | March 2020
 
 ## Proposal
 
@@ -23,7 +21,7 @@ The aim is to create a CNN-based classifier that can correctly classify each of 
 We will use the evaluation metrics to compare the the performance of the classifier against the benchmark models in the next section.
 
 ### Benchmark Model
-For the benchmark model, we will use models that have performed well on a similar dataset of dog breeds from Stanford 
+For the benchmark model, we will use models that have performed well on a similar [dataset of dog breeds from Stanford](http://vision.stanford.edu/aditya86/ImageNetDogs/main.html).
 
 Table 1: Summary of Benchmarks of Stanford Dogs [1]
 | Method                         | Top - 1 Accuracy (%) |
