@@ -1,6 +1,7 @@
 # Machine Learning Engineer Nanodegree
 
 Marc Seitz
+
 March 2020
 
 ## Proposal
@@ -24,7 +25,7 @@ We will use the evaluation metrics to compare the the performance of the classif
 ### Benchmark Model
 For the benchmark model, we will use models that have performed well on a similar dataset of dog breeds from Stanford 
 
-Table 1: Summary of Benchmarks of Stanford Dogs[1]
+Table 1: Summary of Benchmarks of Stanford Dogs [1]
 | Method                         | Top - 1 Accuracy (%) |
 |--------------------------------|----------------------|
 | SIFT + Gaussian Kernel         | 22%                  |
