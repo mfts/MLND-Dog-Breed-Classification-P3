@@ -15,3 +15,6 @@ Image classification means returning a single class for an input image. In contr
 We are using two separate datasets for [dogs](https://s3-us-west-1.amazonaws.com/udacity-aind/dog-project/dogImages.zip) and [humans](http://vis-www.cs.umass.edu/lfw/lfw.tgz) provided by Udacity and The University of Massachusetts, respectively.
 
 The dog dataset contains 133 folders each corresponding to a different dog breed. 
+
+### Solution Statement
+The aim is to create a CNN-based classifier that can correctly classify each of the 133 dog breeds. In order to classify the dog breeds properly, I am designing a deep neural network and then training the network on the supplied datasets. In the end, the classifier can differentiate between dog breeds as well as dogs and humans and non-human/non-dogs.
