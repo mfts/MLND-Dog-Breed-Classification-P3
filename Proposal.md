@@ -10,3 +10,8 @@ Convolutional neural networks (CNNs) is a technique that analyses visual imagery
 
 ### Problem Statement
 Image classification means returning a single class for an input image. In contrast, object recognition, which sounds similar, returns a list of all object classes found in the image. In our case, we have a list of classes of dogs and upon an input of a random dog/human/non-dog image, we would like to return the correct class of dog breed. In the case of human image, we would like to return a class of dog breed lookalike. In the case of non-dog/non-human image we should return an error.
+
+### Dateset and Inputs
+We are using two separate datasets for [dogs](https://s3-us-west-1.amazonaws.com/udacity-aind/dog-project/dogImages.zip) and [humans](http://vis-www.cs.umass.edu/lfw/lfw.tgz) provided by Udacity and The University of Massachusetts, respectively.
+
+The dog dataset contains 133 folders each corresponding to a different dog breed. 
