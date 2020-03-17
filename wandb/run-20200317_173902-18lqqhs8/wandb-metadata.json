@@ -1,0 +1,24 @@
+{
+    "root": "/home/workspace/dog_project",
+    "program": "<python with no main file>",
+    "startedAt": "2020-03-17T17:39:02.603551",
+    "host": "a526794eae7b",
+    "username": "root",
+    "executable": "/opt/conda/bin/python",
+    "os": "Linux-4.15.0-1052-gcp-x86_64-with-debian-stretch-sid",
+    "python": "3.6.3",
+    "gpu": "Tesla K80",
+    "gpu_count": 1,
+    "cpu_count": 4,
+    "cuda": "10.2.89",
+    "args": [
+        "-f",
+        "/root/.local/share/jupyter/runtime/kernel-e3b39ab6-1e19-4038-902d-e09ef98ff811.json"
+    ],
+    "state": "running",
+    "jobType": null,
+    "mode": "run",
+    "name": "easy-morning-4",
+    "project": "dog-classifier",
+    "heartbeatAt": "2020-03-17T18:28:10.013246"
+}

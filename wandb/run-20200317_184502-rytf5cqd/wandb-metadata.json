@@ -1,0 +1,24 @@
+{
+    "root": "/home/workspace/dog_project",
+    "program": "<python with no main file>",
+    "startedAt": "2020-03-17T18:45:01.692223",
+    "host": "7b2fe0677bd4",
+    "username": "root",
+    "executable": "/opt/conda/bin/python",
+    "os": "Linux-4.15.0-1052-gcp-x86_64-with-debian-stretch-sid",
+    "python": "3.6.3",
+    "gpu": "Tesla K80",
+    "gpu_count": 1,
+    "cpu_count": 4,
+    "cuda": "10.2.89",
+    "args": [
+        "-f",
+        "/root/.local/share/jupyter/runtime/kernel-ca7bfd64-fba8-4972-bcce-bc61229b0454.json"
+    ],
+    "state": "running",
+    "jobType": null,
+    "mode": "run",
+    "name": "swept-feather-5",
+    "project": "dog-classifier",
+    "heartbeatAt": "2020-03-17T21:51:37.944928"
+}
