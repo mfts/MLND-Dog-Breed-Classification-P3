@@ -15,22 +15,22 @@ For an introduction to this project, please read the initial [README file](https
 	
 2. Create a new environment with Python 3.6 and install packages & activate environment.
 
-  ```
-  conda env create -f environment.yml
-  source activate dog-classify
-  ```
+    ```
+    conda env create -f environment.yml
+    source activate dog-classify
+    ```
 
 3. Create an [IPython kernel](http://ipython.readthedocs.io/en/stable/install/kernel_install.html) for the nlpnd environment
 
-  ```
-  python -m ipykernel install --user --name dog-classify --display-name "dog-classify"
-  ```
+    ```
+    python -m ipykernel install --user --name dog-classify --display-name "dog-classify"
+    ```
 
 4. Open a terminal window and navigate to the project folder. Open the notebook and follow the instructions.
 
-  ```
-  jupyter notebook dog_app.ipynb
-  ```
+    ```
+    jupyter notebook dog_app.ipynb
+    ```
 
 Download datasets manually (optional):
 
