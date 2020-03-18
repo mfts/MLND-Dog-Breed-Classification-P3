@@ -2,15 +2,15 @@
 
 ## Introduction
 
-For an introduction to this project, please read the initial [README file](https://github.com/mfts/MLND-Capstone-P3/blob/master/README.md). 
+For an introduction to this project, please read the initial [README file](https://github.com/mfts/MLND-Dog-Breed-Classification-P3/blob/master/README.md). 
 
 ## Installation 
 
 1. Clone the repository and navigate to the Notebooks folder.
 	
 	```	
-	git clone https://github.com/mfts/MLND-Capstone-P3.git
-	cd MLND-Capstone-P3/Notebooks
+	git clone https://github.com/mfts/MLND-Dog-Breed-Classification-P3.git
+	cd MLND-Dog-Breed-Classification-P3/Notebooks
 	```
 	
 2. Create a new environment with Python 3.6 and install packages & activate environment.

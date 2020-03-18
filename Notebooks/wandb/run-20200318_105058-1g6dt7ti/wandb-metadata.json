@@ -2,7 +2,7 @@
     "root": "/Users/mfts/Developer/Udacity/nd009/p3-capstone",
     "program": "<python with no main file>",
     "git": {
-        "remote": "https://github.com/mfts/MLND-Capstone-P3.git",
+        "remote": "https://github.com/mfts/MLND-Dog-Breed-Classification-P3.git",
         "commit": "ec35a6aba71d20533850777d1d1330ea2b238700"
     },
     "email": "marc@mfts.io",
