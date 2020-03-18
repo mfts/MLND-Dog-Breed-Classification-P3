@@ -1,0 +1,24 @@
+{
+    "root": "/home/workspace/dog_project",
+    "program": "<python with no main file>",
+    "startedAt": "2020-03-18T15:40:14.411313",
+    "host": "e6851b3545d3",
+    "username": "root",
+    "executable": "/opt/conda/bin/python",
+    "os": "Linux-4.15.0-1052-gcp-x86_64-with-debian-stretch-sid",
+    "python": "3.6.3",
+    "gpu": "Tesla K80",
+    "gpu_count": 1,
+    "cpu_count": 4,
+    "cuda": "10.2.89",
+    "args": [
+        "-f",
+        "/root/.local/share/jupyter/runtime/kernel-d642bb70-a63c-439f-90c2-6b288302723d.json"
+    ],
+    "state": "running",
+    "jobType": null,
+    "mode": "run",
+    "name": "frosty-terrain-16",
+    "project": "dog-classifier",
+    "heartbeatAt": "2020-03-18T18:49:16.096043"
+}
