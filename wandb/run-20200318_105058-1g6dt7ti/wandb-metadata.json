@@ -1,0 +1,26 @@
+{
+    "root": "/Users/mfts/Developer/Udacity/nd009/p3-capstone",
+    "program": "<python with no main file>",
+    "git": {
+        "remote": "https://github.com/mfts/MLND-Capstone-P3.git",
+        "commit": "ec35a6aba71d20533850777d1d1330ea2b238700"
+    },
+    "email": "marc@mfts.io",
+    "startedAt": "2020-03-18T10:50:58.200206",
+    "host": "MMBP.local",
+    "username": "mfts",
+    "executable": "/opt/anaconda3/envs/ml-capstone/bin/python",
+    "os": "Darwin-19.3.0-x86_64-i386-64bit",
+    "python": "3.6.10",
+    "cpu_count": 8,
+    "args": [
+        "-f",
+        "/Users/mfts/Library/Jupyter/runtime/kernel-d1560f22-61b2-4a6d-bc16-9d368a3d78a8.json"
+    ],
+    "state": "running",
+    "jobType": null,
+    "mode": "run",
+    "name": "stellar-puddle-8",
+    "project": "dog-classifier",
+    "heartbeatAt": "2020-03-18T10:50:59.713217"
+}
