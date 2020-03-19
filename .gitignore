@@ -1,2 +1,4 @@
 Notebooks/data/**
 .DS_Store
+*.docx
+*.sketch
