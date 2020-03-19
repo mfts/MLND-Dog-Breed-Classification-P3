@@ -25,11 +25,11 @@ Marc Seitz | March 2020
 
 ## Report
 
-### Definition
-#### Project Overview
+### 1. Definition
+#### 1.1 Project Overview
 The visual sense is one of five core senses humans have. It has always been a challenge to computer programmers to teach computers the way humans perceive the world through their senses. Image recognition is a relatively easy task for humans and yet a very difficult task for computers to perform. 
 
-In order to create a better algorithm for image recognition, in 2010, ImageNet Large Scale Visual Recognition Challenge proposed an annual competition for research teams to evaluate their algorithms on a large dataset with 1000 categories and over 1 million images [1]. In the 2010s, the error rates of misclassifying images fell drastically, in large part due to the introduction of deep neural network optimized for spatial variations, called convolutional neural networks [2]. The ImageNet competition is still held every year. 
+In order to create a better algorithm for image recognition, in 2010, ImageNet Large Scale Visual Recognition Challenge proposed an annual competition for research teams to evaluate their algorithms on a large dataset with 1000 categories and over 1 million images [[1]]. In the 2010s, the error rates of misclassifying images fell drastically, in large part due to the introduction of deep neural network optimized for spatial variations, called convolutional neural networks [[2]]. The ImageNet competition is still held every year. 
 
 By now, convolutional neural networks (CNN) are widely accepted for image recognition and image classification tasks. Image recognition is also a thriving research field with applications limited by our imagination: everything humans see, an algorithm could potentially be trained to see. 
 
@@ -40,14 +40,14 @@ There is a plethora of real-world application for this research, such as:
 
 My personal motivation for working on image classification is my background as software engineer in the manufacturing industry. I have seen endless opportunities on factory floors to introduce cameras and image recognition to increase production efficiency. Even beyond manufacturing, I am keen to apply my machine learning knowledge to other domains.
 
-#### Problem Statement
+#### 1.2 Problem Statement
 The objective of this project will be to use deep learning techniques to classify dog breeds.
 
 When given an image, we want to be able to determine if it contains a dog and furthermore, return the canine’s breed.
 
 To achieve this, we plan on using different neural network architectures such as a basic shallow CNN and a pretrained deep CNN.
 
-#### Metrics
+#### 1.3 Metrics
 The evaluation metric for this problem will be the classification accuracy, which is defined as the percentage of correction prediction.
 
 ```
@@ -58,8 +58,8 @@ Classification accuracy was an optimal metric because it is presumed that the da
 
 Other metrics such as Precision, Recall, or F1 score were ruled out as they are more applicable to classification challenges that contain a relatively small target class in an unbalanced dataset.
 
-### Analysis
-#### Data Exploration and Visualization
+### 2. Analysis
+#### 2.1 Data Exploration and Visualization
 For this project we will use two datasets provided by Udacity and by the University of Massachusetts, respectively. The dataset provided by Udacity contains 8351 images of dogs from 133 classes (dog dataset). The dataset from the University of Massachusetts contains 13233 images of humans (human dataset).
 
 The full datasets can be downloaded [here][dogs] (dogs) and [here][humans] (humans).
@@ -72,7 +72,7 @@ A set of example image from the human dataset:
 
 ![Sample Human Input][humans_input]
 
-#### Algorithms and Techniques
+#### 2.2 Algorithms and Techniques
 The proposed solution to this problem is to apply deep learning techniques that have proved to be highly successful in the field of image classification.
 
 First, we will preprocess the images (more on that in a later section) to be able to feed them into the neural network models. 
@@ -87,10 +87,10 @@ CNNs extract features from images by sliding a filter over the input, row by row
 
 We will use the evaluation metrics described in earlier section to compare the performance of these solutions against the benchmark models in the next section.
 
-#### Benchmark
-For the benchmark model, we will use models that have performed well on a similar dataset of dog breeds from Stanford [3].
+#### 2.3 Benchmark
+For the benchmark model, we will use models that have performed well on a similar dataset of dog breeds from Stanford [[3]].
 
-Table 1: Summary of Benchmarks of Stanford Dogs [4]
+Table 1: Summary of Benchmarks of Stanford Dogs [[4]]
 | Method                         | Top - 1 Accuracy (%) |
 |--------------------------------|----------------------|
 | SIFT + Gaussian Kernel         | 22%                  |
@@ -98,28 +98,28 @@ Table 1: Summary of Benchmarks of Stanford Dogs [4]
 | Gnostic Fields                 | 47%                  |
 | Selective Pooling Vectors      | 52%                  |
 
-### Methodology
-#### Data Preprocessing
-##### Data Splitting
+### 3. Methodology
+#### 3.1 Data Preprocessing
+##### 3.1.1 Data Splitting
 Splitting a dataset into training and testing set is best practice for evaluating a model’s true accuracy. In this project we go a step further and split the dog dataset into a train, validation and test set. The train set with 6680 images will be used to train the model, whereas the validation set (835 images) is used for evaluating the model throughout the process of training. The test set (836 images) will be used to get the classification accuracy of the model.
 
-##### Data Preprocessing
-In order to feed our images in our neural network, we have to preprocess them in the appropriate input format. The images are resized by performing a random crop to 224x224 pixels, which is the minimum height and width for pretrained models from PyTorch [5]. In addition, the images are normalized with a mean and standard deviation as followed:
+##### 3.1.2 Data Preprocessing
+In order to feed our images in our neural network, we have to preprocess them in the appropriate input format. The images are resized by performing a random crop to 224x224 pixels, which is the minimum height and width for pretrained models from PyTorch [[5]]. In addition, the images are normalized with a mean and standard deviation as followed:
 
 ```
 mean = [0.485,0.456,0.406]
 std = 0.229,0.224,0.225]
 ```
 
-##### Data Augmentation
+##### 3.1.3 Data Augmentation
 We have also applied several transformations to augment the data in the train set for a more robust algorithm. We have used:
 
 -	A random vertical flip with a 30% likelihood;
 -	A random horizontal flip with a 30% likelihood; and
 -	A random rotation by 30 degrees.
 
-#### Implementation
-##### Model Architecture
+#### 3.2 Implementation
+##### 3.2.1 Model Architecture
 We will start with designing a basic convolutional neural network from scratch using PyTorch. 
 
 Starting with a Sequential model, so we can build the model layer by layer.
@@ -138,7 +138,7 @@ The model will make its prediction based on the class with the highest probabili
 
 Furthermore, we have chosen the loss function Cross Entropy Loss, which is most common for classification problems, and Adam optimizer, which is generally a good optimizer for many use cases.
 
-##### Training and Validation
+##### 3.2.2 Training and Validation
 Here we will train and evaluate the model. We will start with 100 epochs, which is the number of times the model will cycle through the data. Each cycle the model will improve until it reaches a plateau.
 
 We chose a small batch size of 32 and a learning rate for the optimizer of 0.0001.
@@ -234,7 +234,7 @@ Epoch: 100 	Training Loss: 3.615571 	Validation Loss: 3.974969
 
 ![Basic CNN training][basic_cnn_training]
 
-##### Testing
+##### 3.2.3 Testing
 Here we will review the accuracy of the model on test set.
 
 ```
@@ -274,10 +274,10 @@ Test Accuracy: 13% (117/836)
 
 The accuracy on the test set of 13% is very low. It’s to be expected that the accuracy will not be high. The CNN is only three layers deep and not very feature rich either with maximum depth of 64 neurons on the third convolutional layer.
 
-#### Refinement
+#### 3.3 Refinement
 The basic CNN, which we design from scratch did not perform well on our classification task. Hence, we have decided to use a pretrained model and use it for transfer learning.
 
-##### Model Architecture
+##### 3.3.1 Model Architecture
 From all possible pretrained models, we have chosen the ResNet50 model. ResNet50 is a 50-layer deep convolutional neural network that has been trained on the ImageNet dataset with millions of images in 1000 classes. Among the 1000 classes are also 120 classes of dogs. Hence, the images the model has been trained on is similar to our image dataset and we can take advantage of the model’s feature extractions from its convolutional layers.
 
 In order to successfully transfer the learning of this model to our classification task, we freeze the weights of all layers and replace the final fully-connected Linear layer with our own Linear layer that connects to 133 output neurons and is activated by a Log Softmax function.
@@ -301,7 +301,7 @@ if use_cuda:
 
 Optimizer and loss function remain the same as in the previous model.
 
-##### Training and Validation
+##### 3.3.2 Training and Validation
 Here we will train and evaluate the transfer model. We will start with 10 epochs. We chose a small batch size of 32 and a learning rate for the optimizer of 0.0001.
 
 ```
@@ -339,7 +339,7 @@ The final trained model has a significantly lower validation loss than we could 
 ![ResNet50 Training][resnet_training]
 ![Training Comparison][comparison]
 
-##### Testing
+##### 3.3.3 Testing
 Here we will review the accuracy of the model on test set.
 
 ```
@@ -350,8 +350,8 @@ Test Accuracy: 84% (706/836)
 
 The accuracy on the test set of 84% is very high and clearly much better than the basic CNN. After training the transfer model for only 10 epochs, this is a huge success and astonishing accuracy of the algorithm.
 
-### Results
-#### Model Evaluation and Validation
+### 4. Results
+#### 4.1 Model Evaluation and Validation
 During the model development phase, the validation data was used to evaluate the model. The final model architecture, a pretrained ResNet50 with a custom fully-connected layer, and the hyperparameters were chosen because they performed well overall.
 
 After training both the basic CNN and transferred ResNet50 model on the dog dataset, it’s time to test if the classifier also performs well with new data. We run the classifier on new images and perform one of the following three tasks:
@@ -366,19 +366,19 @@ After training both the basic CNN and transferred ResNet50 model on the dog data
 
 The model performs well on the new set of images of dogs, humans and others. The dog breed labels are accurate. The labels of humans are interesting but accurate and going through the training images of these classes one can see where the features come from. For the image of the robot it’s completely arbitrary in my opinion. I don’t see the features to expect a bull terrier, expect perhaps the slim torso and thick head.
 
-#### Justification
+#### 4.2 Justification
 The final model achieved a classification accuracy of 84% on the testing data which exceeded the benchmark from section 2.3. 
 
 Given the classification accuracy on the brand-new images in section 4.1, we can safely say the final model is an adequate solution to solve the problem of dog breed classification.
 
-### Conclusion
+### 5. Conclusion
 In this project, we have built an algorithm to detect and classify dogs in images according to their breed. First, we tried a basic CNN architecture, which performed poorly with 13% classification accuracy. Second, we tried a more complex CNN architecture based on a pretrained ResNet50 model with a custom final fully-connected layer. This model performed extremely well with a classification accuracy of 84% on our test set of 836 dog images.
 
 The result of the transfer learning is much better than I had expected and probably much better than a human (without a trained eye) could classify dog breeds.
 
 Personally, I have not even heard of some of the dog breeds before, so having an algorithm tell me the type of dog is magical.
 
-#### Reflection
+#### 5.1 Reflection
 The process used for this project can be summarized with the following steps:
 
 1.	The initial problem was defined, and an appropriate dataset was obtained.
@@ -389,7 +389,7 @@ The process used for this project can be summarized with the following steps:
 
 Without a doubt, the transfer learning model beats the basic CNN in any way in this classification problem. One take away for future problems would be to take a look at existing, pretrained models where the underlying dataset shares similarities with one’s dataset and then use transfer learning instead of building a model from scratch. 
 
-#### Improvements
+#### 5.2 Improvements
 If we were to continue with this project, there are a number of additional areas that could be explored to improve the algorithm:
 
 -	Increase the dataset’s size – currently, we are training on only 6680 images of dogs;
@@ -398,14 +398,14 @@ If we were to continue with this project, there are a number of additional areas
 -	Experiment with other transfer model architectures, such as Inception V3 or Xception.
 
 
-### References
+### 6. References
 
-[1]	O. Russakovsky, J. Deng, S. Hao, J. Krause, S. Satheesh, S. Ma, Z. Huang, A. Karpathy, A. Khosla, M. Bernstein, A. Berg, L. Fei-Fei (2014), “ImageNet Large Scale Visual Recognition Challenge”, arXiv:1409.0575 [cs.CV]
+[[1]]	O. Russakovsky, J. Deng, S. Hao, J. Krause, S. Satheesh, S. Ma, Z. Huang, A. Karpathy, A. Khosla, M. Bernstein, A. Berg, L. Fei-Fei (2014), “ImageNet Large Scale Visual Recognition Challenge”, [arXiv:1409.0575][1] [cs.CV]
 
-[2]	A. Krizhevsky, I. Sutskever, G. Hinton (2012), “ImageNet Classification with Deep Convolutional Neural Networks”, https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf
+[[2]]	A. Krizhevsky, I. Sutskever, G. Hinton (2012), “ImageNet Classification with Deep Convolutional Neural Networks”, https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf
 
-[3]	A. Khosla, N. Jayadevaprakash, B. Yao, L. Fei-Fei (2011), “Stanford Dogs Dataset”, http://vision.stanford.edu/aditya86/ImageNetDogs/main.html
+[[3]]	A. Khosla, N. Jayadevaprakash, B. Yao, L. Fei-Fei (2011), “Stanford Dogs Dataset”, http://vision.stanford.edu/aditya86/ImageNetDogs/main.html
 
-[4]	Hsu, David (2015), "Using Convolutional Neural Networks to Classify Dog Breeds", http://cs231n.stanford.edu/reports/2015/pdfs/fcdh_FinalReport.pdf
+[[4]]	Hsu, David (2015), "Using Convolutional Neural Networks to Classify Dog Breeds", http://cs231n.stanford.edu/reports/2015/pdfs/fcdh_FinalReport.pdf
 
-[5]	https://pytorch.org/docs/stable/torchvision/models.html
+[[5]]	https://pytorch.org/docs/stable/torchvision/models.html
